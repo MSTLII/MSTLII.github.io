@@ -4,7 +4,7 @@ body{
  min-height: 100vh;
  background-color: aliceblue;
  background-image: url(../images/my-images.png);
- background-size: contain;
+ background-size: 10%vh;
  background-repeat: no-repeat;
- background-position: center;
+ background-position: center top;
 }
