@@ -306,10 +306,10 @@ h1, h2{
 
 h3{
   font-family: "Gill Sans";
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 500;
+  font-weight: 4400;
   line-height: 8px;
   letter-spacing: 3px;
   margin-top: 0;
@@ -384,10 +384,20 @@ h3{
 
 .bottomparagraph-specs > ul > li {
   list-style: none;
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 200;
+  font-family: "Gill Sans";
+  font-weight: lighter;
+  font-size: 14px;
+  font-weight: 100;
  }
+
+.cvlist, 
+.teachinglist {
+  list-style-image: url(Images/Assets/bullet.png);
+}
+
+.list-style-image{
+margin-bottom: 4px;
+}
 
 /** REFERENCES LIST **/
 .bottomparagraph-references{
@@ -1055,19 +1065,24 @@ margin-left:140px;
 
 .grid-container-prototype {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, minmax(100px,200px));
+  
   
   grid-column-gap: 8px;
-  grid-row-gap: 8px;
+  
   margin-bottom:0;
   padding-bottom:0;
   
-  min-width: 90vw;
   margin: 0 auto;
   margin-bottom: 300px;
 
   border: 10px solid red; 
+}
+
+
+.grid-container-prototype div img {
+  width: 100%;
+  height: auto;
 }
 
 article.descriptor{
