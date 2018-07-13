@@ -18,6 +18,10 @@ body{
   border: 10px solid red; border  **/
 }
 
+.center {
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .wrapper {
     margin: 40px auto 0;
@@ -25,6 +29,21 @@ body{
   /** comment out 
   border: 10px solid blue;border  **/
   }
+}
+
+/* Case grid */
+.case-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.case-grid-item {
+  max-width: 400px;
+}
+
+.case-grid-item img {
+  width: 100%;
+  height: auto;
 }
 
 /** Main Nav (list styles) **/
@@ -55,6 +74,7 @@ nav > ul > li {
   letter-spacing: 2px;
   
   padding: 15px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 680px) {
@@ -343,7 +363,10 @@ h3{
   flex-flow: row nowrap;
   justify-content: flex-end; 
   position:relative;
-  margin-right: -180px;
+  
+  background-image: url(Images/Assets/scroll_symbol_right.svg);
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .bottomparagraph-specs > ul > li {
