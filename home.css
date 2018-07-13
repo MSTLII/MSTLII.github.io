@@ -14,6 +14,7 @@ body{
   max-width: 1440px;
  
   /** comment out 
+   max-width: 1440px;
   border: 10px solid red; border  **/
 }
 
@@ -27,7 +28,6 @@ body{
 }
 
 /** Main Nav (list styles) **/
-
 
 nav {
   display: flex;
@@ -72,7 +72,6 @@ nav > ul > li > a {
 }
 
 
-
 /** IMAGES **/
 .hero {
   display:block;
@@ -82,39 +81,14 @@ nav > ul > li > a {
   margin-bottom: 120px;
 }
 
-.sectormap {
-  display:block;
-  margin: 0 auto;
-  width: 75%;
-  margin-bottom: 120px;
-  margin-top:120px;
-  filter: grayscale(1);
-}
-
-.sectormsp-screen1 hover: .overlay{
-  position:absolute;
-  display:block;
-  margin: 0 auto;
-  
-  z-index: 100;
-  background: transparent url(<img class="overlay" src="Images/Gucci/sector-analysis/sectormap_secondcreen.png" alt="sector map screen one">">)no-repeat;
-  cursor: pointer;
-  
-}
-
-  <img class="overlay"src="Images/Gucci/sector-analysis/sectormap_secondcreen.png" alt="sector map screen one">
-
-
-/**QUESTIONS
-??? Text delay animation 
-h1 h2 {
-  animation-name: textDelay;
-  animation-duration: 1s;
+.hero{
+  animation-name:imageDelay;
+  animation-duration: 1.9s;
   animation-timing-function:ease-in-out;
 }
 
-@keyframes textDelay{
-  	0% {
+@keyframes imageDelay{
+  	0%{
 		opacity: 0;
         top: 30px;
 	}
@@ -126,6 +100,81 @@ h1 h2 {
         top: 10px;
 	}
 }
+
+.sectormap-container {
+  border: 2px solid transparent;
+  
+  position: relative;
+}
+
+
+.sectormap-container:hover .sectormap-overlay  {
+  opacity: 1;
+}
+.sectormap-container:hover .sectormap  {
+  opacity: 0;
+}
+
+.sectormap {
+  display:block;
+  margin: 0 auto;
+  width: 75%;
+  margin-bottom: 120px;
+  margin-top:120px;
+  filter: grayscale(1);
+  
+  transition: opacity .2s ease-in;
+}
+
+.sectormap-overlay {
+  display:block;
+  margin: 0 auto;
+  width: 75%;
+  
+  position: absolute;
+  top: 120px;
+  left: 160px;
+  
+  opacity: 0;
+  transition: opacity .2s ease-in;
+}
+
+.sectormap {
+  animation-name:imageDelay;
+  animation-duration: 1.9s;
+  animation-timing-function:ease-in-out;
+}
+
+
+@keyframes imageDelay{
+  	0%{
+		opacity: 0;
+        top: 30px;
+	}
+    80%{
+      opacity: 1;
+    }
+	100% {
+		opacity: 1;
+        top: 10px;
+	}
+}
+
+
+.sectormap hover: .overlay{
+  position:absolute;
+  display:block;
+  margin: 0 auto;
+  
+  z-index: 100;
+  background: transparent url(img class="sectormap overlay" src="Images/Gucci/sector-analysis/overlay_map.png") no-repeat;
+  cursor: pointer;
+  
+}
+
+ 
+
+/**QUESTIONS
 
 ???Overlay effect on sectormap screens 
 
@@ -145,7 +194,7 @@ from {
   }
 to {visibility: visible;}
 }
-**/
+
 
 /** QUESTION how to animate wayfinding & scroll symbols? **/
 
@@ -153,7 +202,7 @@ to {visibility: visible;}
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start; 
-  margin-left: -50vw;
+  margin-left: -650px;
   max-width: 50%vw;
 }
 
@@ -174,6 +223,10 @@ to {visibility: visible;}
 
 
 
+
+/**animation notes
+
+**/
 /**MAIN TYPOGRAPHY**/
 h1{
   font-family: "EB Garamond";
@@ -198,8 +251,28 @@ h2{
   margin-top: 0;
 }
 
+h1, h2{
+  animation-name:textDelay;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-in-out;
+}
+
+@keyframes textDelay{
+  	0%{
+		opacity: 0;
+        top: 30px;
+	}
+    80%{
+      opacity: 1;
+    }
+	100% {
+		opacity: 1;
+        top: 10px;
+	}
+}
+
 h3{
-  font-family: "Poppins";
+  font-family: "Gill Sans";
   font-size: 18px;
   font-style: normal;
   font-variant: normal;
@@ -207,7 +280,7 @@ h3{
   line-height: 8px;
   letter-spacing: 3px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .intro-paragraph{
@@ -220,6 +293,26 @@ h3{
   width:55%;
   padding-bottom:120px;
   margin-top: 0;
+}
+
+.intro-paragraph{
+  animation-name:textDelay;
+  animation-duration: 1.8s;
+  animation-timing-function:ease-in-out;
+}
+
+@keyframes textDelay{
+  	0%{
+		opacity: 0;
+        top: 30px;
+	}
+    80%{
+      opacity: 1;
+    }
+	100% {
+		opacity: 1;
+        top: 10px;
+	}
 }
 
 
@@ -310,7 +403,7 @@ h4 {
 }
 
 h5{
-  font-family:"Poppins";
+  font-family:"Gill Sans";
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
@@ -332,7 +425,7 @@ h6.small-description {
 }
 
 .dates{
-  font-family:"Poppins";
+  font-family:"Gill Sans;
 }
 
 .small-paragraph {
@@ -403,7 +496,7 @@ section{
 
 /** Approach Section **/
 
-section .approach-section research-section .result-section{
+section .approach-section research-section .result-section {
  height: 100vh;
  padding-top: 30%;
  padding-bottom: 80px;
@@ -445,7 +538,7 @@ article{
 }
 
 @media (max-width: 680px) {
- .approachsteps > ul {
+.approachsteps > ul {
     flex-flow: column wrap;
   }
 .approachsteps > ul > li {
@@ -476,11 +569,7 @@ width:99%;
   line-height: 1.3;
 }
 
-.one {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
-}
+
 
 /** How to round dots? hr {
  border: none -- strip default hr styling 
@@ -492,6 +581,11 @@ hr:after {
  color: palegoldenrod /* pick a color -
 }
 **/
+.one {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
 
 .one h5 {
     text-align: center;
@@ -503,12 +597,12 @@ hr:after {
 /** This controls The contents-SAVE **/
 
 
-.sectorvisualization {
+.sectorvisualization-toprow {
     display: grid;
     max-width: 80vw;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(1,1fr);
-    margin-bottom:180px;
+    padding-bottom: 20px;
 }
 
 article img {
@@ -526,7 +620,7 @@ section article:nth-child(even) {
 article.theme{
   display: flex;
   flex-flow: column;
-  padding-top: 40px;
+  padding-top: 20px;
   margin-left: 20px;
   margin-right; 20px;
 }
@@ -584,14 +678,33 @@ h6 {
   
 }
 
-.caption-align {
+.caption {
   display: flex;
   align-items: baseline;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: 20px;
   margin-right: 20px;
 }
 
+.sectorvisualization-bottomrow{
+    display: grid;
+    max-width: 80vw;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(1,1fr);
+    margin-bottom:180px; 
+    text-align: left;
+    border-top: 3px dotted #E5A51B;
+    margin: 0;
+    padding: 25px;
+}
+
+article.theme{
+  display: flex;
+  flex-flow: column;
+  padding-top: 40px;
+  margin-left: 20px;
+  margin-right; 20px;
+}
 /**  Analysis Section **/
 
 .analysis-section {
@@ -634,9 +747,6 @@ article < .analysis{
   font-family: "Poppins";
   font-size: 20px;
   font-weight: 400;
-}
-
-  
 }
 
 /** design assets and images **/
@@ -888,6 +998,7 @@ height: auto;
 
 /** INSIGHTS Section **/
 
+
 .insightscontainer{
   display:flex;
   flex-flow: row nowrap;
@@ -897,19 +1008,212 @@ height: auto;
 }
 
 .insightimage {
+  max-width: 35%;
+}
 
+.insightimage-middle{
+margin-left:140px;
+}
+
+/** RESULTS Section Prototype images & description**/
+
+.grid-container-prototype {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  margin-bottom:0;
+  padding-bottom:0;
+  
+  min-width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 300px;
+
+  border: 10px solid red; 
+}
+
+article.descriptor{
+  display: flex;
+  flex-flow: column;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-right; 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-flow:column-reverse;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-item-28 {
+  grid-row: 1/4;
+  grid-column: 3/4;
+  
+  background-image: url(/Images/Gucci/results/decoder_screen1.png);
+}
+
+.grid-item-29 {
+  grid-row: 1/4;
+  grid-column: 4/5;
+  
+  background-image: url(/Images/Gucci/results/gucci_decoder_marian_st.laurent_02.png);
+}
+
+.grid-item-30 {
+  grid-row: 1/4;
+  grid-column: 5/6;
+  
+  background-image: url(/Images/Gucci/results/guccidecoder_marianstlaurent_03.png);
+}
+
+.grid-item-31 {
+  grid-row: 1/4;
+  grid-column: 6/7;
+  
+  background-image: url(/Images/Gucci/results/guccidecoder_st.laurent_04.png);
+}
+
+/** notes for prototype grid container Section 
+
+.grid-item .screen1 {
+  background-image: url(/Images/Gucci/results/decoder_screen1.png);
+}
+
+.screen2 {
+ 
+  background-image: url(/Images/Gucci/results/gucci_decoder_marian_st.laurent_02.png);
+}
+
+.screen3 {
+  grid-row: 1/3;
+  grid-column: 4/5;
+  
+  background-image: url(/Images/Gucci/results/guccidecoder_marianstlaurent_03.png);
+}
+
+.screen4 {
+  grid-row: 1/3;
+  grid-column: 5/6;
+  
+  background-image: url(/Images/Gucci/results/guccidecoder_st.laurent_04.png);
+}
+
+.description-left {
+  display: flex;
+  flex-flow: row nowrap;
+  grid-row: 1/4;
+  grid-column: 1/2;
+  
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+.description-right{
+  display: flex;
+  flex-flow: column;
+  grid-row: 1/4;
+  grid-column: 6/7;
+  
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+  
+
+display:flex;
+flex-flow: row nowrap;
+align-content: flex-end;
+margin: 0 auto;
+
+
+.description-left .description-right{
+display:flex;
+flex-flow: column;
+align-content: flex-start;
+margin: 0 auto;
+width:80vw;
+}
+
+.description-left {
+  grid-row: 1/4;
+  grid-column: 1/2;
+}
+
+article .text1 {
+
+}
+
+.text2 {
 
 }
 
 
-.prototype-container{
+.description-right {
+  grid-row: 1/4;
+  grid-column: 6/7;
+}
+
+.text3 {
+
+}
+
+.text4 {
+
+}
+
+.prototype-images{
   display:flex;
   flex-flow: row nowrap;
   align-content: flex-end;
   margin: 0 auto;
-  width:80%vw;
+  width:80vw;
+
+  grid-row: 1/4;
+  grid-column: 2/6;
 }
 
-.resultimage {
-max-width:20%;
+.grid-item {
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1);
 }
+
+
+
+
+.grid-item-caption1 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+
+}
+
+.grid-item-caption2 {
+  grid-row: 3/4;
+  grid-column: 3/4;
+
+}
+
+.grid-item-caption3 {
+  grid-row: 3/4;
+  grid-column: 4/5;
+
+}
+
+.grid-item-caption4 {
+  grid-row: 3/4;
+  grid-column: 5/6;
+
+}
+
+
+
+
+**/
