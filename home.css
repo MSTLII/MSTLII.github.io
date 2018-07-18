@@ -7,12 +7,12 @@ body{
   padding:0;
   background-color: #F4F1F0;
   
-  font-family: "EB Garamond";
+  font-family: "Garamond";
   font-size: 20px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 200;
-  line-height: 28px;
+  font-weight: 100;
+  line-height: 24px;
     
 }
 
@@ -104,12 +104,11 @@ nav > ul > li > a.active {
 }
 
 
-
 /** IMAGES **/
 .hero {
   display:block;
   margin: 0 auto;
-  width: 90%vw;
+  width: 80%vw;
   padding-top: 90px;
   margin-bottom: 120px;
 }
@@ -255,11 +254,6 @@ to {visibility: visible;}
 }
 
 
-
-
-/**animation notes
-
-**/
 /**MAIN TYPOGRAPHY**/
 h1{
   font-family: "EB Garamond";
@@ -309,20 +303,20 @@ h3{
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 4400;
-  line-height: 8px;
-  letter-spacing: 3px;
+  font-weight: 350;
+  line-height: 16px;
+  letter-spacing: 1.8px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .intro-paragraph{
   font-family:"EB Garamond";
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 200;
-  line-height: 28px;
+  font-weight: 100;
+  line-height: 24px;
   width:55%;
   padding-bottom:120px;
   margin-top: 0;
@@ -348,15 +342,14 @@ h3{
 	}
 }
 
-
 /** Upper Left and Lower Right Paragraphs - with h3 subtitle **/
 .medium-paragraph-left{
-  font-family:"EB Garamond";
+  font-family:"Garamond";
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
   font-weight: 100;
-  line-height: 24px;
+  line-height: 20px;
   letter-spacing: 1px; 
   width: 45%;
   margin-top: 0;
@@ -370,7 +363,7 @@ h3{
 
 /** QUESTION how to animate wayfinding & scroll symbols? **/
 /** PROJECT SPECS LIST **/
-.bottomparagraph-specs {
+.bottomparagraph-specs, .cvlist .dates {
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -388,11 +381,62 @@ h3{
   font-weight: lighter;
   font-size: 14px;
   font-weight: 100;
+  line-height: 1.2;
  }
+
+/** CURRICULUM STYLING **/
+.cvlistcontainer-grid{
+    display: grid;
+    max-width: 80vw;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(1,1fr);
+
+    margin: 0;
+}
+
+article .cvlist{ 
+  display: flex;
+ justify-content: space-between;
+}
+
+article .cvlist > ul > { 
+  display: flex;
+ justify-content: space-between;
+}
+
+article .cvlist01{
+  grid-row: 1/1
+  grid-column: 1/2;
+  
+  list-style: none;
+  font-family: "Gill Sans";
+  font-weight: lighter;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+article.cvlist02{
+  grid-row:
+  grid-column: 2/3;
+}
+
+article.cvlist03{
+ grid-row:
+ grid-column:3/6;
+}
+
+article.cvlist04{
+ grid-row:
+ grid-column:5/7;
+}
+
 
 .cvlist, 
 .teachinglist {
+  /** grey out until revise image
   list-style-image: url(Images/Assets/bullet.png);
+   LIST **/
 }
 
 .list-style-image{
@@ -404,10 +448,12 @@ margin-bottom: 4px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+
 }
 
-.bottomparagraph-references ul {
+.bottomparagraph-references ol {
   list-style: none;
+  max-width:45vw;
 }
 
 .bottomparagraph-references > ol> li {
@@ -416,9 +462,11 @@ margin-bottom: 4px;
   font-style: italic;
   font-variant: normal;
   font-weight: 100;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.4px;
+  line-height: 1;
   padding-top:5px;
   margin-left:20px;
+  
 }
 
 /** Typography - Sublists **/
@@ -450,12 +498,12 @@ h4 {
 
 h5{
   font-family:"Gill Sans";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 19px;
-  letter-spacing: 2px;
+  letter-spacing: 1.2px;
   margin:0;
 }
 
@@ -498,12 +546,14 @@ h6.small-description {
 reference **/
 
 .caption {
-  font-family: "EB Garamond";
+  font-family: "Garamond";
   font-size: 10px;
   font-style: italic;
   font-variant: normal;
   font-weight: 100;
-  letter-spacing: 1px;
+  line-height: 1;
+  justify-content: center;
+  letter-spacing: 1.1px;
 }
 
 /** Curriculum list **/
@@ -526,7 +576,6 @@ section{
 
 .section-intro {
 }
-
 
 .result-section{
 
@@ -568,9 +617,10 @@ article{
 
 .approachsteps > ul > li{
  font-family: "Garamond";
- font-size: 18px;
- letter-spacing: 1.5px;
+ font-size: 16px;
+ letter-spacing: 1.1px;
  font-style: italic;
+  line-height: 1;
 }
 
 .approachnumber{
@@ -663,20 +713,13 @@ article img {
 section article:nth-child(even) {
 }
 
-article.theme{
+article .theme{
   display: flex;
   flex-flow: column;
-  padding-top: 20px;
-  margin-left: 20px;
-  margin-right; 20px;
+  align-content: center;
+  justify-content: center;
+  padding-top: 0px;
 }
-
-.theme-textcontainer{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center; 
-}
-
 
 article .theme-one{
    grid-row: 1/5;
@@ -685,8 +728,7 @@ article .theme-one{
 
 article .theme-two{
    grid-row: 1/5;
-   grid-column: 2/3;
-  
+   grid-column: 2/3; 
 }
 
 article .theme-three{
@@ -720,8 +762,7 @@ h6 {
   list-style: none;
   font-family: "Gill Sans";
   font-weight: 300;
-  line-height: 1.3;
-  
+  line-height: 1.3;  
 }
 
 .caption {
@@ -737,17 +778,15 @@ h6 {
     max-width: 80vw;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(1,1fr);
-    margin-bottom:180px; 
-    text-align: left;
+    padding-bottom:80px;
+    text-align: center;
     border-top: 3px dotted #E5A51B;
     margin: 0;
-    padding: 25px;
 }
 
 article.theme{
   display: flex;
   flex-flow: column;
-  padding-top: 40px;
   margin-left: 20px;
   margin-right; 20px;
 }
@@ -982,7 +1021,6 @@ height: auto;
   padding-bottom:0;
   
   /**comment out red border - HOW TO MAKE FULL WIDTH OF viewport width - outside of wrapper?  border: 10px solid red; **/
-  
 
 }
 
@@ -1048,17 +1086,47 @@ height: auto;
 .insightscontainer{
   display:flex;
   flex-flow: row nowrap;
-  align-content: flex-end;
+  align-content: flex-start;
   margin: 0 auto;
   width:80%vw;
+  margin-bottom: 40px;
+}
+
+.insightscontainer{
+  display: grid;
+  grid-template-columns: repeat(6, minmax(100px,200px));
+  
+  grid-column-gap: 8px;
+  
+  margin-bottom:0;
+  padding-bottom:0;
+  
+  margin: 0 auto;
+  border: 10px solid red; 
 }
 
 .insightimage {
-  max-width: 35%;
+  max-width: 1fr;
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  width:30%vw;
+
 }
 
-.insightimage-middle{
-margin-left:140px;
+.insightimage-one{
+ grid-column:1/3;
+ 
+}
+
+.insightimage-two{
+ grid-column:3/5;
+}
+
+.insightimage-three{
+ grid-column:5/7;
 }
 
 /** RESULTS Section Prototype images & description**/
